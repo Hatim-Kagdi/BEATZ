@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    padding: 0 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.brand img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container {
+    min-height: 70vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 23px auto;
+    width: 90%;
+    border-radius: 15px;
+    padding: 34px;
+    background-image: url(bg.jpg);
+    text-align: center;
+    padding-bottom: 150px; 
+}
+
+/* Bottom Section */
+.bottom {
+    position: fixed; 
+    width: 100%;
+    height: auto;
+    min-height: 120px; /* Increased height for new layout */
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Progress Bar */
+#myProgressBar {
+    width: 90%;
+    max-width: 500px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space between seek bar and song info */
+}
+
+/* Song Info Section */
+.songInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.songInfo img {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    margin-bottom: 5px;
+}
+
+.song-name {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Controls Section */
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons i {
+    font-size: 2rem;
+}
+
+/* Song Item */
+.songItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 8px 0; 
+    max-width: 95%; 
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow content */
+    text-align: center;
+    width: 50%; 
+    justify-content: center;
+}
+
+.songItem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.timeStamp {
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.timeStamp i {
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        padding-bottom: 170px;
+    }
+    
+    .bottom {
+        min-height: 110px;
+    }
+
+    .timeStamp {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .songItem {
+        flex-direction: row;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .icons i {
+        font-size: 1.5rem;
+    }
+
+    #myProgressBar {
+        width: 85%;
+    }
+
+    .songInfo {
+        left: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .container{
+        padding-bottom: 120px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bottom {
+        min-height: 100px;
+    }
+
+    .timeStamp {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+
+    .brand {
+        font-size: 1.2rem;
+        padding: 10px;
+        padding-right: 20px;
+        display: flex;
+        flex-direction:row;
+    }
+
+    .songItem {
+        width: 100%;
+        margin: 5px 0;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .songItem img {
+        width: 35px;
+        margin: 0;
+    }
+    
+    .icons {
+        gap: 10px;
+    }
+    
+    .icons i {
+        font-size: 1.2rem;
+    }
+
+    #myProgressBar {
+        width: 75%;
+    }
+}
